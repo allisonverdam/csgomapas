@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CS:GO - Mapas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+  <link rel="stylesheet" type="text/css" href="css/csgomapas.css">
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/img-touch-canvas.js"></script>
+  <script src="js/prettify.js" type="text/javascript"></script><style type="text/css"></style>
+
+
+  <script src="js/prettify.js" type="text/javascript"></script><style type="text/css"></style>
+  <script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+  <script src="js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
+
+  <script src="js/modernizr.min.js" type="text/javascript"></script>
+  <script src="js/jquery.mousewheel.min.js"></script>
+  <script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+  <script src="js/TweenMax.min.js" type="text/javascript"></script>
+  <script src="js/horizontal_scroll_example.min.js" type="text/javascript"></script>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <script>
+  function carregarUrl(){
+    $('li a').click(function (e) {
+      $('#myModal img').attr('src', $(this).attr('data-img-url'));
+      $("#myModal img").pinchzoomer();
+    });
+  }</script>
+  </head>
+  <body onload="onLoad()" ng-app="starter">
+  <script>
+  function onLoad() {
+    carregarUrl();
+  }
+  </script>
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <header class="container_perso"><div class="container_perso"></div></header>
+
+  <div class="container zindex">
+   <!-- BOTÂO DE ESCOLHER MAPA -->
+   <section class="text-center">
+    <h1 style="color: white;">CS:GO - Mapas</h1>
+
+    <div class="btn-group" role="group">
+      <div class="btn-group" role="group">
+        <div class="dropdown">
+          <button class="btn btn-primary" type="button" data-toggle="dropdown">Mapas</button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">Mapas Classicos</li>
+              <li><a href="#Dust_2" data-target="#myModal" data-toggle="modal" data-img-url="img/mapas/Dust-II.jpg">De_Dust2</a></li>
+              <li><a href="#Nuke" data-target="#myModal" data-toggle="modal" data-img-url="img/mapas/Nuke.jpg">Nuke</a></li>
+              <li><a href="#Mirage" data-target="#myModal" data-toggle="modal" data-img-url="img/mapas/Mirage.jpg">Mirage</a></li>
+              <li><a href="#Cache" data-target="#myModal" data-toggle="modal" data-img-url="img/mapas/Cache.jpg">Cache</a></li>
+              <li><a href="#Overpass" data-target="#myModal" data-toggle="modal" data-img-url="img/mapas/Overpass.jpg">Overpass</a></li>
+              <li><a href="#Inferno" data-target="#myModal" data-toggle="modal" data-img-url="img/mapas/Inferno.jpg">Inferno</a></li>
+              <li><a href="#Cobblestone" data-target="#myModal" data-toggle="modal" data-img-url="img/mapas/Cobblestone.jpg">Cobblestone</a></li>
+              <li><a href="#Season" data-target="#myModal" data-toggle="modal" data-img-url="img/mapas/Season.jpg">Season</a></li>
+              <li><a href="#Train" data-target="#myModal" data-toggle="modal" data-img-url="img/mapas/Train.jpg">Train</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Segundo botao-->
+        <div class="btn-group" role="group">
+          <div class="dropdown">
+            <button class="btn btn-primary" type="button" data-toggle="dropdown" onclick="window.AdMob.showInterstitial();">Smokes</button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">EM CONSTRU&#xC7;&#xC3;O</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Terceiro botao-->
+          <div class="btn-group" role="group">
+            <div class="dropdown">
+              <button class="btn btn-primary" type="button" data-toggle="dropdown" onclick="window.AdMob.showInterstitial();">Dicas</button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-header">EM CONSTRU&#xC7;&#xC3;O</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </div>
+
+
+      <div id="myModal" class="modal fade1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body" style="min-width: 200px; min-height: 200px;">
+             <img id="img1" src="#">
+           </div>
+         </div>
+       </div>
+     </div>
+     <footer>
+     </footer>
+  </body>
+</html>
